@@ -21,7 +21,7 @@ build:
     - shippable_retry npm install
     - mkdir -p $SHIPPABLE_REPO_DIR/shippable/testresults/$TEST_SUITES
     - pushd $SHIPPABLE_REPO_DIR/$TEST_SUITES
-    - $MOD_LOC/mocha --recursive "$SHIPPABLE_REPO_DIR/$TEST_SUITES/**/*.spec.js" -R mocha-junit-reporter --reporter-options mochaFile=$SHIPPABLE_REPO_DIR/shippable/testresults/$TEST_SUITES/testresults.xml
+    - $SHIPPABLE_REPO_DIR/node_modules/.bin/mocha --recursive "$SHIPPABLE_REPO_DIR/$TEST_SUITES/**/*.spec.js" -R mocha-junit-reporter --reporter-options mochaFile=$SHIPPABLE_REPO_DIR/shippable/testresults/$TEST_SUITES/testresults.xml
     - popd
 
 
