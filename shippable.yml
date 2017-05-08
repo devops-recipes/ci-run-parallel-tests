@@ -10,8 +10,8 @@ branches:
 # using pre-defined build variables
 # full list http://docs.shippable.com/ci/advancedOptions/environmentVariables/
 env:
-  TEST_SUITES=test_suite_1
-  TEST_SUITES=test_suite_2
+  - TEST_SUITES=test_suite_1
+  - TEST_SUITES=test_suite_2
 
 build:
   # http://docs.shippable.com/ci/shippableyml/#ci
